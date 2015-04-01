@@ -1,5 +1,6 @@
 package com.cmscopy.FactoryBoom.item;
 
+import com.cmscopy.FactoryBoom.creativetab.CreativeTabFactoryBoom;
 import com.cmscopy.FactoryBoom.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -16,7 +17,7 @@ public class ItemFactoryBoom extends Item
     public ItemFactoryBoom()
     {
         super();
-        //this.setCreativeTab(Creative)
+        this.setCreativeTab(CreativeTabFactoryBoom.FactoryBoom_Tab);
     }
     @Override
     public String getUnlocalizedName()
@@ -35,6 +36,8 @@ public class ItemFactoryBoom extends Item
     public String getUnlocalizedName(ItemStack itemStack)
     {
         return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+
+        // item.modid:itemname.name
     }
 
     public String getUnwrappedUnlocalizedName(String unlocalizedName)

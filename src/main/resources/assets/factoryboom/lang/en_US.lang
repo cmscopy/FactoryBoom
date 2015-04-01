@@ -1,0 +1,4 @@
+item.factoryboom:ItemTest.name=My Test Item
+tile.factoryboom:FactoryHousing.name=Factory Housing
+tile.factoryboom:ConveyorMotor.name=Conveyor Motor
+itemGroup.factoryboom=Factory Boom

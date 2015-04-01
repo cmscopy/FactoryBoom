@@ -2,7 +2,9 @@ package com.cmscopy.FactoryBoom;
 
 
 import com.cmscopy.FactoryBoom.handler.ConfigHandler;
+import com.cmscopy.FactoryBoom.init.ModBlocks;
 import com.cmscopy.FactoryBoom.init.ModItems;
+import com.cmscopy.FactoryBoom.init.ModRecipes;
 import com.cmscopy.FactoryBoom.proxy.IProxy;
 import com.cmscopy.FactoryBoom.reference.Reference;
 import com.cmscopy.FactoryBoom.utility.LogHelp;
@@ -12,6 +14,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.sql.Ref;
 
@@ -34,6 +37,7 @@ public class FactoryBoom
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
 
         ModItems.init();
+        ModBlocks.init();
 
         LogHelp.info("Pre-Init finished!");
     }
@@ -42,6 +46,9 @@ public class FactoryBoom
     public void init(FMLInitializationEvent event)
     {
         LogHelp.info(Reference.MOD_NAME+" is online! :-)");
+
+        ModRecipes.init();
+
         LogHelp.info("Init finished!");
     }
 
@@ -50,6 +57,9 @@ public class FactoryBoom
     {
 
         LogHelp.info("Post-Init finished!");
+
+        for(String oreName: OreDictionary.getOreNames())
+            LogHelp.info(oreName);
     }
 
 }
