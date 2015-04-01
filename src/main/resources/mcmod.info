@@ -1,0 +1,19 @@
+[
+{
+    "modid": "FactoryBoom",
+    "name": "Factory Boom",
+    "description": "New possibilities to process your world... :-)",
+    "version": "1.7.10-0.1A",
+    "mcversion": "1.7.10",
+    "authorList": [
+        "cmscopy"
+    ],
+    "logoFile": "",
+    "screenshots": [
+    ],
+    "parent": "",
+    "dependencies": [
+        "mod_MinecraftForge"
+    ]
+}
+]
